@@ -2,7 +2,7 @@ import time
 import serial
 
 
-ser = serial.Serial("/dev/ttyACM0", baudrate=9600) #Modificar el puerto serie de ser necesario
+ser = serial.Serial("/dev/ttyUSB0", baudrate=9600) #Modificar el puerto serie de ser necesario
 
 try:
     while True:

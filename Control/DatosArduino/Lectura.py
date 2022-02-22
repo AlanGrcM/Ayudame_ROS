@@ -1,11 +1,11 @@
 import serial
 import time
 
-ser = serial.Serial('/dev/ttyACM0',9600)
+ser = serial.Serial('/dev/ttyUSB0',9600)
 ser.flushInput()
 
 
-def ilimunacion(line):
+def iluminacion(line):
    if int(line) < 800:
       dato = "noche"
    else:
