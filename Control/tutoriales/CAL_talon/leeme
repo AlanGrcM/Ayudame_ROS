@@ -1,0 +1,10 @@
+Este programa sirve para calibrar los talon SR
+
+Necesitas los siguientes componentes:
+
+1. Raspberry pi pico 
+2. LED con resistencia de 330 ohms
+3. Potenciometro
+4. Puente H llamado Talon SR. puedes encontrar el datasheet aquí:
+   https://studylib.net/doc/18662182/talon-and-talon-sr-user-manual---cross-the-road-electronics
+5. Se ocuparán dos salidas PWM de la pico para calibrar el sistema, uno para observar el LED y  	otra para calibrar el TALON,
