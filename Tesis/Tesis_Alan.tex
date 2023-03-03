@@ -571,24 +571,23 @@ roslip:  Es una biblioteca de cliente LISP y generalmente se utiliza para librer
 \section{Tren motriz del robot móvil} %\label{Tren motriz del robot móvil}
  \markboth{Tren motriz del robot móvil}{Tren motriz del robot móvil}
  \lhead[]{}
+	\subsection{Fuente de alimentación.}
+		\lhead[]{\thesection \ Fuente de alimentación.}
+La alimentación seleccionada para el tren motriz del robot debe ser capaz de alimentar los 12 [V] necesarios para los drivers de control de motores Talon SR, y al mismo tiempo controlar el dispositivo Raspberry Pi 4 model B, cuya alimentación es de 5 [V] a 1 [A] para que pueda funcionar y alimentar la raspberry Pi Pico 5 [V] a 1 [A], así como los sensores que funcionan también a un voltaje de 5 [V], que es el caso de los sensores de distancia o sensores ultrasónicos, así como el sensor de corriente y el display.\\
+
+Por lo que fue seleccionada una batería de ácido plomo de 12 [v] a 35 [Ah] o amperes hora.
 
 
-	\section{Protección de la electrónica de potencia}
+	\subsection{Protección de la electrónica de potencia}
 		\lhead[]{\thesection \ Protección de la electrónica de potencia}
+	Es iportante mencionar que los motores pueden tener un riesgo de generar picos de corrientes. Estos picos de corriente se pueden observar en la siguiente curva.\\
+	Por este motivo fue necesario buscar una alternativa para proteger a los circuitos electrónicos, por lo que se plantea usar fusibles con soportes de picos de hasta 30 Amperes. El modelo seleccionado fueron fusibles de tipo américano cerámicos.	
 		
 		
-	\section{Sensores de distancia y retroalimentación
-}
-		\lhead[]{\thesection \ Sensores de distancia y retroalimentación
-}
-		
-\section{Algoritmo de control móvil} %\label{Algoritmo de control móvil}
- \markboth{Algoritmo de control móvil}{Algoritmo de control móvil}
- \lhead[]{}
-\section{Configuración para el controlador Talón SR}
+\subsection{Configuración para el controlador Talón SR}
 		\lhead[]{\thesection \ Configuración para el controlador Talón SR}
 		
-Considerando la característica de que la salida de la raspberry tiene una salida de la alimentación de 3.3 V y el rango de la señal de pulso modulada del talon es de 1 a 2 milisegundos, se debe de ajustar el ciclo de trabajo para configurar y calibrar el voltaje de salida para caracterizar los movimientos. De manera similar a la tabla 4.1, ahora tenemos:
+Considerando la característica de que la salida de la raspberry tiene una salida de la alimentación de 3.3 V y el rango de la señal de pulso modulada del talon es de 1 a 2 milisegundos, se debe de ajustar el ciclo de trabajo para configurar y calibrar el voltaje de salida para caracterizar los movimientos. De manera similar a la tabla 4.1, ahora tenemos:\\
 \begin{table}[t]
 \begin{center}
 \begin{tabular}{| p{4cm} | p{3cm} | p{3cm} | p{3cm}  | p{3cm} |} 
@@ -622,10 +621,18 @@ Giro en sentido horario & 0.1 & 0.1 & 3.3 & 3.3\\
 \caption{Caracterización de movimientos.}
 \end{center}
 \end{table}
+
+\section{Sensores de distancia y retroalimentación
+}
+		\lhead[]{\thesection \ Sensores de distancia y retroalimentación
+}
  \section{Diagrama de Flujo para el algoritmo de navegación}
 		\lhead[]{\thesection \ Diagrama de Flujo para el algoritmo de navegación} 
 		
-
+\section{Algoritmo de control móvil} %\label{Algoritmo de control móvil}
+ \markboth{Algoritmo de control móvil}{Algoritmo de control móvil}
+ \lhead[]{}
+ 
  \section{Diagramas de conexión}
 		\lhead[]{\thesection \ Diagramas de conexión} 
 	 \subsection{Propuesta de Diseño del circuito.}

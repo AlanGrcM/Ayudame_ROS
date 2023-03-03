@@ -39,8 +39,8 @@ int main(){
     
     
     int frecuenciaDeseada = 300;
-    float Divider = (125000000/(4096*frecuenciaDeseada))/16; //= 3.81
-    
+    float Divider = (125000000/(4095*frecuenciaDeseada))/16; //= 3.3
+    // float Divider = (125000000/(4096*300))/16
     long ciclos =  65535;//numero de ciclos del wrap y numero de ciclos maximo del contador
 
     //iniciamos la biblioteca stdio para que funcione todo el programa
